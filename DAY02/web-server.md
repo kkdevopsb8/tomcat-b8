@@ -1,14 +1,15 @@
 ## web servers vs app servers
 
-Web Server                                    App Server
+| Web Server                            | App Server                                                |
+| ------------------------------------- | --------------------------------------------------------- |
+| Static content handling               | Business logic + dynamic content                          |
+| Serves HTML, CSS, JS, images          | Runs application code (Java, .NET, etc.)                  |
+| Examples: Apache HTTP Server, Nginx   | Examples: Apache Tomcat, WildFly (JBoss)                  |
+| Works on HTTP/HTTPS (Ports 80/443)    | Works on application ports (8080, 8443, etc.)             |
+| Can do reverse proxy & load balancing | Manages application lifecycle, JVM, threads               |
+| Lightweight and fast for static files | Heavier, supports sessions, servlets, transactions        |
+| Commonly exposed to the internet      | Usually placed behind a web server in 3-tier architecture |
 
-1. Static content handling                     1. Business logic + dynamic content
-2. Serves HTML/CSS/JS/images                   2. Runs application code (Java/.NET/etc.)
-3. Examples: Apache httpd, Nginx               3. Examples: Tomcat, WildFly/JBoss
-4. Works on HTTP/HTTPS (80/443)                4. Works on app ports (8080/8443 etc.)
-5. Can do reverse proxy + load balancing       5. Manages app lifecycle, JVM, threads
-6. Usually lighter, faster for static          6. Heavier, supports sessions, servlets
-7. Directly exposed to internet (commonly)     7. Often kept private behind web server
 
 # Apache httpd server (Web Server) - Full Lab on RHEL
 
